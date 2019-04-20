@@ -7,7 +7,12 @@ public class Square implements Shape {
         this.gon = gon;
     }
 
+    @Override
     public String getShapeName(){
         return "square";
     }
+    /*public double getArea(double gon){
+        double result = gon*gon;
+        return result;
+    }*/
 }
