@@ -14,15 +14,22 @@ public class ShapeCollector {
         listOfShapes.remove(shape);
     }
 
-    public void getFigure(int n) {
-        listOfShapes.get(n);
+    public Shape getFigure(int n) {
+        Shape result = listOfShapes.get(n);
+        return result;
     }
 
-    /*public void showFigure() {
-        listOfShapes.get(int n);
-    }*/
+    public String showFigures() {
+        String string1 = "";
+        for(int i=0; i<listOfShapes.size(); i++ ){
+            Shape shape = listOfShapes.get(i);
+           string1 = string1 + shape.getShapeName();
+        }
+        return string1;
+        }
     public int getlistOfShapesQuantity(){
       int result = listOfShapes.size();
         return result;
     }
+
 }

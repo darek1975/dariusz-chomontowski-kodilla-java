@@ -5,5 +5,5 @@ interface Shape {
 
         public String getShapeName();
 
-        //public double getArea();
+        public double getField();
 }
