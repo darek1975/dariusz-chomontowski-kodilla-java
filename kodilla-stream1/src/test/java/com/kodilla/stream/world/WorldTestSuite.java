@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 public class WorldTestSuite {
     @Test
-    public void testgetPeopleQuantity() {
+    public void testGetPeopleQuantity() {
         //Given
         BigDecimal bigDecimal1= new BigDecimal("40000000");
         BigDecimal bigDecimal2= new BigDecimal("30000000");
@@ -23,10 +23,13 @@ public class WorldTestSuite {
         Continent Africa = new Continent();
         Africa.addCountry(Country3);
         Africa.addCountry(Country4);
+        World world = new World();
+        world.addContinent(Africa);
+        world.addContinent(Europe);
 
 
         //When
-        World world = new World();
+
         BigDecimal totalPeople = world.getPeopleQuantity();
 
 
