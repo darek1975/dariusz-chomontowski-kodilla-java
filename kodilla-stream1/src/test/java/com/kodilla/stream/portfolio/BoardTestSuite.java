@@ -103,8 +103,9 @@ public class BoardTestSuite {
                 .map(t->t.getCreated())
                 .map(t->project.diffInDays(t, LocalDate.now()))
                 .reduce((long) 0, (sum, t) -> sum + t);
+        double average1 = total/numbers;
         //Then
-        Assert.assertEquals(10, total/numbers);
+        Assert.assertEquals(10, average1, 0.001);
     }
 
 
